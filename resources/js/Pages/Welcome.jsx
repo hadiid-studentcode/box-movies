@@ -1,21 +1,17 @@
 import Navbar from "@/Components/Navbar";
 import { Head } from "@inertiajs/inertia-react";
-
-// testing Router
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-
-// akhir
-
+import logo from "../../../public/Assets/Images/logo/boxMovies.png";
 
 export default function Welcome(props) {
     return (
         <>
-
-
             <BrowserRouter>
-            <Head title="Home"/>
+                <Head>
+                    <title>Home</title>
+                    <link rel="icon" href={logo} />
+                </Head>
 
                 <Navbar />
                 <Routes>
@@ -28,26 +24,26 @@ export default function Welcome(props) {
     );
 }
 
-
 function Home(params) {
-    return(
+    return (
         <>
-        <h1>Home</h1>
+            <h1>Home</h1>
         </>
-    )
+    );
 }
 
+function About(params) {
+    return (
+        <>
+            <h1>About</h1>
+        </>
+    );
+}
 
-function About(params) { return (
-    <>
-        <h1>About</h1>
-    </>
-);}
-
-
-
-function Contact(params) { return (
-    <>
-        <h1>Contact</h1>
-    </>
-);}
+function Contact(params) {
+    return (
+        <>
+            <h1>Contact</h1>
+        </>
+    );
+}
