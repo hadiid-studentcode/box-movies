@@ -1,49 +1,22 @@
-import Navbar from "@/Components/Navbar";
+import Header from "@/Components/Header";
 import { Head } from "@inertiajs/inertia-react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import logo from "../../../public/Assets/Images/logo/boxMovies.png";
 
 export default function Welcome(props) {
+
+const title = props.title;
+
     return (
         <>
-            <BrowserRouter>
-                <Head>
-                    <title>Home</title>
-                    <link rel="icon" href={logo} />
-                </Head>
 
-                <Navbar />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/contact" element={<Contact />} />
-                </Routes>
-            </BrowserRouter>
+
+            <Head title={title} />
+
+
+            <Header />
+            <h1>Welcome</h1>
+
+
         </>
     );
 }
 
-function Home(params) {
-    return (
-        <>
-            <h1>Home</h1>
-        </>
-    );
-}
-
-function About(params) {
-    return (
-        <>
-            <h1>About</h1>
-        </>
-    );
-}
-
-function Contact(params) {
-    return (
-        <>
-            <h1>Contact</h1>
-        </>
-    );
-}

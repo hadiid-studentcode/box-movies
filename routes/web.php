@@ -24,11 +24,21 @@ use Inertia\Inertia;
 //     ]);
 // });
 
-// Route::get('/dashboard', function () {
+// Route::get('/movies', function () {
 //     return Inertia::render('Dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
 
-Route::inertia('/{path?}', 'Welcome');
+
+Route::get('/', function () {
+    return Inertia::render('Welcome',[
+        'title'=> 'Welcome'
+    ]);
+});
+Route::get('/movies', function () {
+    return Inertia::render('Movies',[
+        'title' => 'Movies'
+    ]);
+});
 
 require __DIR__.'/auth.php';
