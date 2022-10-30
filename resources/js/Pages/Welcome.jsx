@@ -1,10 +1,10 @@
+import Footers from "@/Components/Footers";
 import Header from "@/Components/Header";
 import Team from "@/Components/Team";
-import { Head } from "@inertiajs/inertia-react";
-import { Link } from '@inertiajs/inertia-react'
+import Videos from "@/Components/Videos";
+import { Head, Link } from "@inertiajs/inertia-react";
 
-
-const products = [
+const films = [
     {
         id: 1,
         name: 'Basic Tee',
@@ -81,7 +81,7 @@ const products = [
         price: '$35',
         color: 'Black',
     },
-    // More products...
+    // More films...
 ]
 
 export default function Welcome(props) {
@@ -94,32 +94,33 @@ export default function Welcome(props) {
 
             <Head title={title} />
             <Header />
-            {/* product */}
+            {/* <Videos/> */}
+            {/* Film */}
             <div className="bg-black">
                 <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                    <h2 className="text-2xl font-bold tracking-tight text-white">Customers also purchased</h2>
+                    <h2 className="text-2xl font-bold tracking-tight text-white">There are many movies available !</h2>
 
                     <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-                        {products.map((product) => (
-                            <div key={product.id} className="group relative">
+                        {films.map((films) => (
+                            <div key={films.id} className="group relative">
                                 <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-dark-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
                                     <img
-                                        src={product.imageSrc}
-                                        alt={product.imageAlt}
+                                        src={films.imageSrc}
+                                        alt={films.imageAlt}
                                         className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                                     />
                                 </div>
                                 <div className="mt-4 flex justify-between">
                                     <div>
                                         <h3 className="text-sm text-white">
-                                            <a href={product.href}>
+                                            <a href={films.href}>
                                                 <span aria-hidden="true" className="absolute inset-0" />
-                                                {product.name}
+                                                {films.name}
                                             </a>
                                         </h3>
-                                        <p className="mt-1 text-sm text-white">{product.color}</p>
+                                        <p className="mt-1 text-sm text-white">{films.color}</p>
                                     </div>
-                                    <p className="text-sm font-medium text-white">{product.price}</p>
+                                    <p className="text-sm font-medium text-white">{films.price}</p>
                                 </div>
                             </div>
 
@@ -139,11 +140,9 @@ export default function Welcome(props) {
                 </div>
 
             </div>
-            {/* akhir product */}
-
-
-
-           <Team/>
+            {/* akhir Movies */}
+            <Team />
+            <Footers />
 
 
 
