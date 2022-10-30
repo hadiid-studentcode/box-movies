@@ -22,6 +22,8 @@
         "vite": "^3.0.0"
     },
     "dependencies": {
-        "@heroicons/react": "^2.0.12"
+        "@heroicons/react": "^2.0.12",
+        "flowbite": "^1.5.3",
+        "flowbite-react": "^0.3.2"
     }
 }

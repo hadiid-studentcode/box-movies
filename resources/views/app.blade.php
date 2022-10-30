@@ -10,6 +10,7 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
+        <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
 
 
         <!-- Scripts -->
