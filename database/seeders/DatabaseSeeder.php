@@ -20,5 +20,21 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        \App\Models\FilmsModel::factory(5)->create();
+
+
+        // \App\Models\FilmsModel::factory()->create([
+        //     'title' => 'ddd',
+        //     'href' =>  'ddd',
+        //     'imageSrc'  => 'ddd',
+        //     'imageAlt'  => 'ddd',
+        //     'description'  => 'ddd',
+        //     'release_year' => 'ddd',
+        //     'language_id' => 'ddd',
+        //     'original_language_id' => 'ddd',
+        //     'length' => 'ddd',
+        //     'rating' => 'ddd',
+        // ]);
     }
 }
