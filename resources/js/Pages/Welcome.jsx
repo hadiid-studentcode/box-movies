@@ -3,90 +3,100 @@ import Header from "@/Components/Header";
 import Team from "@/Components/Team";
 import Videos from "@/Components/Videos";
 import { Head, Link } from "@inertiajs/inertia-react";
+import logo from "../../../public/Assets/Images/films/The SpongeBob Movie Sponge on the Run.jpg";
 
-const films = [
-    {
-        id: 1,
-        name: 'Basic Tee',
-        href: '#',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
-        imageAlt: "Front of men's Basic Tee in black.",
-        price: '$35',
-        color: 'Black',
-    },
+// const films = [
+//     {
+//         id: 1,
+//         name: 'Basic Tee',
+//         href: '#',
+//         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
+//         imageAlt: "Front of men's Basic Tee in black.",
+//         price: '$35',
+//         color: 'Black',
+//     },
 
-    {
-        id: 2,
-        name: 'Basic Tee',
-        href: '#',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
-        imageAlt: "Front of men's Basic Tee in black.",
-        price: '$35',
-        color: 'Black',
-    },
-    {
-        id: 3,
-        name: 'Basic Tee',
-        href: '#',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
-        imageAlt: "Front of men's Basic Tee in black.",
-        price: '$35',
-        color: 'Black',
-    },
+//     {
+//         id: 2,
+//         name: 'Basic Tee',
+//         href: '#',
+//         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
+//         imageAlt: "Front of men's Basic Tee in black.",
+//         price: '$35',
+//         color: 'Black',
+//     },
+//     {
+//         id: 3,
+//         name: 'Basic Tee',
+//         href: '#',
+//         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
+//         imageAlt: "Front of men's Basic Tee in black.",
+//         price: '$35',
+//         color: 'Black',
+//     },
 
-    {
-        id: 4,
-        name: 'Basic Tee',
-        href: '#',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
-        imageAlt: "Front of men's Basic Tee in black.",
-        price: '$35',
-        color: 'Black',
-    },
-    {
-        id: 5,
-        name: 'Basic Tee',
-        href: '#',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
-        imageAlt: "Front of men's Basic Tee in black.",
-        price: '$35',
-        color: 'Black',
-    },
+//     {
+//         id: 4,
+//         name: 'Basic Tee',
+//         href: '#',
+//         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
+//         imageAlt: "Front of men's Basic Tee in black.",
+//         price: '$35',
+//         color: 'Black',
+//     },
+//     {
+//         id: 5,
+//         name: 'Basic Tee',
+//         href: '#',
+//         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
+//         imageAlt: "Front of men's Basic Tee in black.",
+//         price: '$35',
+//         color: 'Black',
+//     },
 
-    {
-        id: 6,
-        name: 'Basic Tee',
-        href: '#',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
-        imageAlt: "Front of men's Basic Tee in black.",
-        price: '$35',
-        color: 'Black',
-    },
-    {
-        id: 7,
-        name: 'Basic Tee',
-        href: '#',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
-        imageAlt: "Front of men's Basic Tee in black.",
-        price: '$35',
-        color: 'Black',
-    },
+//     {
+//         id: 6,
+//         name: 'Basic Tee',
+//         href: '#',
+//         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
+//         imageAlt: "Front of men's Basic Tee in black.",
+//         price: '$35',
+//         color: 'Black',
+//     },
+//     {
+//         id: 7,
+//         name: 'Basic Tee',
+//         href: '#',
+//         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
+//         imageAlt: "Front of men's Basic Tee in black.",
+//         price: '$35',
+//         color: 'Black',
+//     },
 
-    {
-        id: 8,
-        name: 'Basic Tee',
-        href: '#',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
-        imageAlt: "Front of men's Basic Tee in black.",
-        price: '$35',
-        color: 'Black',
-    },
-    // More films...
-]
+//     {
+//         id: 8,
+//         name: 'Basic Tee',
+//         href: '#',
+//         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
+//         imageAlt: "Front of men's Basic Tee in black.",
+//         price: '$35',
+//         color: 'Black',
+//     },
+//     // More films...
+// ]
+
+
 
 export default function Welcome(props) {
 
+    const films = [props.films][0];
+    
+
+
+
     const title = props.title;
+
+
 
     return (
         <>
@@ -115,16 +125,19 @@ export default function Welcome(props) {
                                         <h3 className="text-sm text-white">
                                             <a href={films.href}>
                                                 <span aria-hidden="true" className="absolute inset-0" />
-                                                {films.name}
+                                                {films.title}
                                             </a>
                                         </h3>
-                                        <p className="mt-1 text-sm text-white">{films.color}</p>
+                                        <p className="mt-1 text-sm text-white">{films.description}</p>
                                     </div>
-                                    <p className="text-sm font-medium text-white">{films.price}</p>
+                                    <p className="text-sm font-medium text-white">{films.release_year}</p>
                                 </div>
                             </div>
 
                         ))}
+
+
+
                     </div>
                     <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                         <div className="rounded-md shadow">

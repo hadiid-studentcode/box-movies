@@ -23,4 +23,11 @@ class FilmsModel extends Model
         'length',
         'rating'
     ];
+
+    public function Films(){
+
+        $films = FilmsModel::all();
+
+        return $films;
+    }
 }

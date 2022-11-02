@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\FilmsModel;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -31,8 +32,13 @@ use Inertia\Inertia;
 
 
 Route::get('/', function () {
+
+    $result = new FilmsModel();
+    $films = $result->Films();
+
     return Inertia::render('Welcome',[
-        'title'=> 'Welcome'
+        'title'=> 'Welcome',
+        'films'=> $films
     ]);
 });
 Route::get('/movies', function () {

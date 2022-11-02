@@ -47,6 +47,6 @@ class FilmsModelFactory extends Factory
             'length'=> '1 jam',
             'rating'=> '9',
 
-        ];
+            ];
     }
 }
