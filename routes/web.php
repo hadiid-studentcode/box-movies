@@ -1,9 +1,9 @@
 <?php
 
-use App\Models\FilmsModel;
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Application;
+use App\Http\Controllers\WelcomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,20 +31,14 @@ use Inertia\Inertia;
 
 
 
-Route::get('/', function () {
 
-    $result = new FilmsModel();
-    $films = $result->Films();
+Route::resource('/', WelcomeController::class);
 
-    return Inertia::render('Welcome',[
-        'title'=> 'Welcome',
-        'films'=> $films
-    ]);
-});
-Route::get('/movies', function () {
-    return Inertia::render('Movies',[
-        'title' => 'Movies'
-    ]);
-});
+
+// Route::get('/movies', function () {
+//     return Inertia::render('Movies',[
+//         'title' => 'Movies'
+//     ]);
+// });
 
 require __DIR__.'/auth.php';

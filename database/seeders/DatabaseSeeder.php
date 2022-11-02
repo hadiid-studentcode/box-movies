@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        \App\Models\FilmsModel::factory(5)->create();
+        \App\Models\FilmsModel::factory(12)->create();
 
 
         // \App\Models\FilmsModel::factory()->create([

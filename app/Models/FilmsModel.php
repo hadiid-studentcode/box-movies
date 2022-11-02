@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class FilmsModel extends Model
 {
@@ -26,7 +27,11 @@ class FilmsModel extends Model
 
     public function Films(){
 
-        $films = FilmsModel::all();
+        // $films = FilmsModel::all();
+
+        $films = DB::table('db_films')
+            ->where('id', '<=', 8)
+            ->get();
 
         return $films;
     }
